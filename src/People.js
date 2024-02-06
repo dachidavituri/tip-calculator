@@ -17,6 +17,11 @@ const People = (props) => {
         placeholder="0"
         required
         className="people-amount"
+        onKeyDown={(e) => {
+          if(!(e.key >= '0' && e.key <= '9' || e.key === 'Backspace')){
+            e.preventDefault()
+          }
+        }}
         value={props.people}
         onChange={props.peopleChange}
       />
