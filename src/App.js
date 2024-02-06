@@ -19,7 +19,7 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const inputChange = (e) => {
     const value = e.target.value;
-    if (parseInt(value, 10) >= 0 || value === "") {
+    if (parseInt(value, 10) >= 0 && parseInt(value, 10) <= 100 || value === "") {
       setInputValue(value);
     }
   };
